@@ -17,10 +17,10 @@ const DICE_IMAGES = {
   red: [diceRed01, diceRed02, diceRed03, diceRed04, diceRed05, diceRed06],
 };
 
-function Dice({ color = 'blue', num = 1 }) {
+function Dice({ className, color = 'blue', num = 1 }) {
   const src = DICE_IMAGES[color][num - 1];
   const alt = `${color} ${num}`;
-  return <img src={src} alt={alt} />;
+  return <img className = {className} src={src} alt={alt} />;
 }
 
 export default Dice;
